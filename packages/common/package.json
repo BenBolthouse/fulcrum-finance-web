@@ -4,7 +4,7 @@
     "description": "Common utilities package",
     "main": "build/index.js",
     "scripts": {
-        "build": "tsc",
+        "build": "nx run common:build",
         "test": "nx run common:test",
         "lint": "nx run common:lint"
     },

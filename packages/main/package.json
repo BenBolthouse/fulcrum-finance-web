@@ -4,7 +4,7 @@
     "description": "Main application package",
     "main": "build/index.js",
     "scripts": {
-        "build": "tsc",
+        "build": "nx run main:build",
         "test": "nx run main:test",
         "lint": "nx run main:lint"
     },

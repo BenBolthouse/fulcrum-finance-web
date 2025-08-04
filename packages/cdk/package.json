@@ -3,11 +3,11 @@
     "version": "1.0.0",
     "description": "CDK infrastructure package",
     "main": "build/index.js",
-    "scripts": {
-        "build": "tsc",
-        "test": "nx run cdk:test",
-        "lint": "nx run cdk:lint"
-    },
+      "scripts": {
+    "build": "nx run cdk:build",
+    "test": "nx run cdk:test",
+    "lint": "nx run cdk:lint"
+  },
     "keywords": [],
     "author": "https://github.com/benbolthouse",
     "license": "MIT",
