@@ -1,0 +1,20 @@
+{
+    "extends": "@tsconfig/node20/tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@fulcrum-finance/cdk": [
+                "packages/cdk/build"
+            ],
+            "@fulcrum-finance/common": [
+                "packages/common/build"
+            ],
+            "@fulcrum-finance/features": [
+                "packages/features/build"
+            ],
+            "@fulcrum-finance/main": [
+                "packages/main/build"
+            ]
+        }
+    }
+}

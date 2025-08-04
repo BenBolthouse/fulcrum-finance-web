@@ -1,0 +1,30 @@
+{
+  "name": "fulcrum-finance-web",
+  "author": "https://github.com/benbolthouse",
+  "license": "MIT",
+  "scripts": {
+    "build": "nx run-many --target=build --all",
+    "build:affected": "nx affected --target=build",
+    "test": "nx run-many --target=test --all",
+    "lint": "nx run-many --target=lint --all",
+    "test:affected": "nx affected --target=test",
+    "lint:affected": "nx affected --target=lint"
+  },
+  "workspaces": [
+    "infrastructure",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@nx/eslint-plugin": "^21.3.11",
+    "@nx/jest": "^21.3.11",
+    "@nx/workspace": "^21.3.11",
+    "@tsconfig/node20": "^20.1.6",
+    "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint": "^9.32.0",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "typescript-eslint": "^8.38.0"
+  }
+}

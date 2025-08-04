@@ -1,0 +1,41 @@
+{
+    "name": "@fulcrum-finance/main",
+    "version": "1.0.0",
+    "description": "Main application package",
+    "main": "build/index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "nx run main:test",
+        "lint": "nx run main:lint"
+    },
+    "keywords": [],
+    "author": "https://github.com/benbolthouse",
+    "license": "MIT",
+    "nx": {
+        "targets": {
+            "build": {
+                "executor": "@nx/js:tsc",
+                "options": {
+                    "outputPath": "packages/main/build",
+                    "main": "packages/main/index.ts",
+                    "tsConfig": "packages/main/tsconfig.json"
+                }
+            },
+            "lint": {
+                "executor": "@nx/eslint:lint",
+                "options": {
+                    "lintFilePatterns": [
+                        "packages/main/**/*.{ts,tsx,js,jsx}"
+                    ]
+                }
+            },
+            "test": {
+                "executor": "@nx/jest:jest",
+                "options": {
+                    "jestConfig": "packages/main/jest.config.js",
+                    "passWithNoTests": true
+                }
+            }
+        }
+    }
+}

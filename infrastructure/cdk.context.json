@@ -1,0 +1,10 @@
+{
+  "hosted-zone:account=715914088149:domainName=benbolt.house:region=us-east-1": {
+    "Id": "/hostedzone/Z064425236Z7LC9STWZTU",
+    "Name": "benbolt.house."
+  },
+  "hosted-zone:account=715914088149:domainName=benbolt.house:region=us-west-1": {
+    "Id": "/hostedzone/Z064425236Z7LC9STWZTU",
+    "Name": "benbolt.house."
+  }
+}

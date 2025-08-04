@@ -1,0 +1,46 @@
+{
+    "extends": "nx/presets/npm.json",
+    "affected": {
+        "defaultBase": "main"
+    },
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "nx/tasks-runners/default",
+            "options": {
+                "cacheableOperations": [
+                    "build",
+                    "lint",
+                    "test"
+                ]
+            }
+        }
+    },
+    "targetDefaults": {
+        "lint": {
+            "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/eslint:lint"
+        },
+        "test": {
+            "inputs": [
+                "default",
+                "^default"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+                "passWithNoTests": true
+            }
+        }
+    },
+    "generators": {
+        "@nx/js:library": {
+            "js": true,
+            "publishable": true
+        }
+    }
+}

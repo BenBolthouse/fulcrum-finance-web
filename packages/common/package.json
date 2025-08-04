@@ -1,0 +1,41 @@
+{
+    "name": "@fulcrum-finance/common",
+    "version": "1.0.0",
+    "description": "Common utilities package",
+    "main": "build/index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "nx run common:test",
+        "lint": "nx run common:lint"
+    },
+    "keywords": [],
+    "author": "https://github.com/benbolthouse",
+    "license": "MIT",
+    "nx": {
+        "targets": {
+            "build": {
+                "executor": "@nx/js:tsc",
+                "options": {
+                    "outputPath": "packages/common/build",
+                    "main": "packages/common/index.ts",
+                    "tsConfig": "packages/common/tsconfig.json"
+                }
+            },
+            "lint": {
+                "executor": "@nx/eslint:lint",
+                "options": {
+                    "lintFilePatterns": [
+                        "packages/common/**/*.{ts,tsx,js,jsx}"
+                    ]
+                }
+            },
+            "test": {
+                "executor": "@nx/jest:jest",
+                "options": {
+                    "jestConfig": "packages/common/jest.config.js",
+                    "passWithNoTests": true
+                }
+            }
+        }
+    }
+}
