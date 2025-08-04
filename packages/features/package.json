@@ -11,6 +11,7 @@
     "keywords": [],
     "author": "https://github.com/benbolthouse",
     "license": "MIT",
+
     "nx": {
         "targets": {
             "build": {
