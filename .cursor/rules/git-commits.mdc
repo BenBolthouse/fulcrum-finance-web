@@ -1,0 +1,53 @@
+---
+alwaysApply: false
+---
+### Commits and Pushes
+- **DO NOT commit or push code unless explicitly told to do so**
+- All git commits and pushes require explicit user approval
+
+### Message Format
+```
+(#[issue number]) [description]
+
+[email]
+
+[bulleteda list]
+```
+
+### Message Components
+- **Description**-Should be less than or equal to 36 characters in length. Should briefly describe the changes in the commit.
+- **Issue number**-Should be the issue number corresponding to the issue tracker identifier. This can be found on the present Git branch following the format `[type]/[issue number]/[optional description]`, e.g.: `feature/199/add-express-api`, or simply `feature/199`.
+- **Email**-Should be the email address of the code committer.
+- **Bulleted list**-Should contain a list of changes included in the commit. If the commit is short and the description provides enough pertinent detail about the changes, then omit the bulleted list.
+
+### Message Validation
+- **Imperative tone**-Description and bulleted list items should be in the imperative voice.
+- **No periods**-Description and bulleted list should not contain periods. Other puncuation is acceptable.
+- **Committer email**-Email should be the email of the committer. If necessary, use the Git command line tools to find the email address of the committer.
+- **No op**-If any of the above validation fails, the commit MUST NOT be created.
+
+### Message Examples
+
+#### ✅ Good Examples
+ 
+```
+(#199) Install and configure webserver for API
+
+johndoe@bigcorp.com
+
+* Add and configure Express webserver
+* Add and document environment variable-driven configuration for Express using dotenv package
+* Add frontend service for connection to Express API
+* Remove stubbed API test endpoint URL and replace with actual API URL
+```
+
+```
+(#199) Delete .env.test file
+
+johndoe@bigcorp.com
+```
+
+### Message Prompt Instructions
+- When prompted explicitly with `Commit`, all changes should be added and committed per the rules in this document.
+- When prompted dynamically with `Commit [additional directions]`, interpret the intent, display the files for commit, and ask for approval. Once approved, commit the changes per the rules in this document.
+---
