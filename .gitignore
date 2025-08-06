@@ -1,11 +1,10 @@
-**/*.js
-**/*.d.ts
 **/node_modules
+**/dist
+**/build
+**/cdk.out
+**/*.js
+!**/eslint.config.js
 !**/jest.config.js
-
-# CDK asset staging directory
-infrastructure/.cdk.staging
-infrastructure/cdk.out
-
-# Build directories
-packages/*/build/
+!**/vite.config.js
+!**/jest.preset.js
+.nx/
