@@ -3,16 +3,7 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@fulcrum-finance/cdk": [
-                "packages/cdk/build"
-            ],
-            "@fulcrum-finance/common": [
-                "packages/common/build"
-            ],
-            "@fulcrum-finance/features": [
-                "packages/features/build"
-            ],
-            "@fulcrum-finance/main": [
+            "@fulcrum-finance-web/main": [
                 "packages/main/build"
             ]
         }

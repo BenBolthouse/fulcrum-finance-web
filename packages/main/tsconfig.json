@@ -3,13 +3,17 @@
   "compilerOptions": {
     "outDir": "./build",
     "types": [
-      "node"
-    ]
+      "node",
+    ],
+    "lib": [
+      "dom"
+    ],
+    "jsx": "react-jsx",
   },
   "include": [
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "vite.config.js"  ],
   "exclude": [
     "jest.config.js",
     "src/**/*.spec.ts",
