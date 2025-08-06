@@ -1,6 +1,7 @@
 {
     "name": "@fulcrum-finance/main",
     "main": "build/index.js",
+    "type": "module",
     "scripts": {
         "build": "nx run main:build",
         "test": "nx run main:test",
@@ -45,6 +46,8 @@
         "vite": "^6.3.5"
     },
     "dependencies": {
+        "consola": "^3.4.2",
+        "oidc-client-ts": "^3.3.0",
         "react": "^19.1.1",
         "react-dom": "^19.1.1"
     }
