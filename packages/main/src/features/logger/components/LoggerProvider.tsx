@@ -65,12 +65,12 @@ export const LoggerProvider: React.FC<React.PropsWithChildren<LoggerProviderProp
         build: (input: InputLogObject) => consola.withDefaults(input),
     };
 
-    const logger = builder.build({ tag: LoggerProvider.name });
+    const logger = builder.build({ tag: "LoggerProvider" });
 
     useEffect(() => {
         logger.debug("Mounted");
 
-        logger.trace({
+        logger.trace("vars", {
             logLevel: logLevelVar,
         });
 
